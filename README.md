@@ -4,4 +4,4 @@ This repo contains the configuration files for the notes I've taken for some cou
 
 
 
-The notes are taken on Obsidian and I used [Quartz](https://quartz.jzhao.xyz/](https://quartz.jzhao.xyz/) to deploy them online. 
+The notes are taken on Obsidian and I used [Quartz](https://quartz.jzhao.xyz/) to deploy them online. 
