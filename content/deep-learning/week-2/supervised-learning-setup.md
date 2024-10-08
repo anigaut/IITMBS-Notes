@@ -14,9 +14,14 @@ Let's apply to these to the example of whether we want to watch a movie. In such
 - **Data**: $x_i$: the input vector and $y_i$ = {yes/no}
 - **Model**: An approximation of the relationship between the input and output. Let's say we decide to use the logistic function:
 
-$$y' = \frac{1}{1+e^{-w^{T}x}}$$
+$$\hat{y} = \frac{1}{1+e^{-w^{T}x}}$$
+
 - **Parameters**: $w$.
 - **Learning algorithm**: Gradient Descent (will be covered soon)
-- **Objective function**: $l(w) = \sum_{i=1}^{n} (y'_i - y_i)^2$ 
+- **Objective function**: $l(w) = \sum_{i=1}^{n} (\hat{y}_i - y_i)^2$
+
+Note:
+- $\hat{y}$ is used instead of $y$ since the model is an approximation. 
+- The loss function takes the squared difference between the predicted output and the real output instead of the modulus since we want the function to be differentiable.
 
 The learning algorithm seeks to find the weight vector $w$ that minimises the objective function.
