@@ -17,7 +17,7 @@ interface FolderContentOptions {
 }
 
 const defaultOptions: FolderContentOptions = {
-  showFolderCount: true,
+  showFolderCount: false,
 }
 
 export default ((opts?: Partial<FolderContentOptions>) => {
@@ -59,7 +59,7 @@ export default ((opts?: Partial<FolderContentOptions>) => {
             </p>
           )}
           <div>
-            <PageList {...listProps} />
+            {/* <PageList {...listProps} /> */}
           </div>
         </div>
       </div>
