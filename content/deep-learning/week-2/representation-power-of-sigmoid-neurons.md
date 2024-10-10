@@ -3,7 +3,7 @@ title: Representing a Multilayered Network of Sigmoid Neurons
 ---
 We have seen that a multilayered network of **Perceptrons**, with one hidden layer, can be used to represent any boolean function precisely. Represent, in this context, means that we could pass an input to the network of perceptrons, and it would give us the correct output based on the truth table for that function. 
 
-Similarly, a **multilayered network of sigmoid neurons** can be used to approximately represent any continuous function to any degree of precision. If $g(x)$ is the output of our approximation and $f(x)$ is the real output, $|g(x) - f(x)| < \epsilon$ for each input, where $\epsilon$ is the degree of precision desired.
+Similarly, a multilayered network of sigmoid neurons can be used to approximately represent any continuous function to any degree of precision. If $g(x)$ is the output of our approximation and $f(x)$ is the real output, $|g(x) - f(x)| < \epsilon$ for each input, where $\epsilon$ is the degree of precision desired. This is known as the Universal Approximation Theorem (UAT).
 
 Any function we're trying to represent can be shown as a collection of towers under the curve. For example: 
 
