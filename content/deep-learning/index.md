@@ -6,6 +6,8 @@ These are my notes for the Deep Learning Course of the IITM BS Program. All the 
 
 - [Week 1](deep-learning/week-1/index)
 - [Week 2](deep-learning/week-2/index)
+- [Week 3](deep-learning/week-3/index)
+
 
 
 
