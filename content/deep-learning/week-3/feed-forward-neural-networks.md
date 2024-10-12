@@ -15,16 +15,18 @@ Putting all the input variables together, we get the input vector $x \in R^{n}$.
 
 The pre-activation part of each neuron takes the weighted sum of the outputs from the previous layer and adds the bias to it. Remember that all these computations are done with vectors since bring all inputs, weights and biases into its respective vectors. The calculation of the activation for the first hidden layer, assuming $n=3$ would be:
 
-$$a_1 = \begin{bmatrix} a_{11} \\ a_{12} \\ a_{13} \end{bmatrix} 
-= \begin{bmatrix} b_{11} \\ b_{12} \\ b_{13} \end{bmatrix} 
-+ \begin{bmatrix} w_{111} & w_{112} & w_{113} \\ w_{121} & w_{122} & w_{123} \\ w_{131} & w_{132} & w_{133} \end{bmatrix} 
-* \begin{bmatrix} x_{1} \\ x_{2} \\ x_{3}\end{bmatrix}$$
+$$
+a_1 = \begin{bmatrix} a_{11} \\ a_{12} \\ a_{13} \end{bmatrix} =
+\begin{bmatrix} b_{11} \\ b_{12} \\ b_{13} \end{bmatrix} + \begin{bmatrix} w_{111} & w_{112} & w_{113} \\ w_{121} & w_{122} & w_{123} \\ w_{131} & w_{132} & w_{133} \end{bmatrix} * \begin{bmatrix} x_{1} \\ x_{2} \\ x_{3}\end{bmatrix}
+$$
+
 
 - For the second hidden layer onwards, $x$ should be replaced by $h$.
 
 Writing the above in a generic form, we get:
 
 $$a_i = b_i + W_i*h_{i-1}$$
+
 
 The activation part of the neuron takes the pre-activation part's output and applies a function on it. This function could logistic, tanh, linear, among others.
 
