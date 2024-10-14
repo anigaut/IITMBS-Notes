@@ -11,11 +11,15 @@ Now, instead of $W$ and $b$, we have $[W_1, W_2,  ... , W_L]$ and $[b_1, b_2, ..
 
 Where:
 
-$$\theta = [W_1, W_2,  ... , W_L, b_1, b_2, ..., b_L]$$
+$$
+\theta = [W_1, W_2,  ... , W_L, b_1, b_2, ..., b_L]
+$$
 
-$$\nabla \theta_t = [\frac{\partial \mathcal{L}(\theta)}{\partial W_{1,t}}, ..., \frac{\partial \mathcal{L}(\theta)}{\partial W_{L,t}}, 
+$$
+\nabla \theta_t = [\frac{\partial \mathcal{L}(\theta)}{\partial W_{1,t}}, ..., \frac{\partial \mathcal{L}(\theta)}{\partial W_{L,t}}, 
 \frac{\partial \mathcal{L}(\theta)}{\partial b_{1,t}}, ...,
-\frac{\partial \mathcal{L}(\theta)}{\partial b_{L,t}}]$$
+\frac{\partial \mathcal{L}(\theta)}{\partial b_{L,t}}]
+$$
 
 $\nabla{\theta}$ is composed of the gradients of the weight and bias of each layer in the network. So, how can we calculate the loss function and how can we calculate the gradient?
 

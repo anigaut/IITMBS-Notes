@@ -25,18 +25,24 @@ $$
 
 Writing the above in a generic form, we get:
 
-$$a_i = b_i + W_i*h_{i-1}$$
+$$
+a_i = b_i + W_i*h_{i-1}
+$$
 
 
 The activation part of the neuron takes the pre-activation part's output and applies a function on it. This function could logistic, tanh, linear, among others.
 
-$$h_i = g(a_i)$$
+$$
+h_i = g(a_i)
+$$
 
 - $g$ is called the activation function.
 
 The activation in the output layer, which uses different notation is:
 
-$$f(x) = h_L = O(a_L)$$
+$$
+f(x) = h_L = O(a_L)
+$$
 
 Using the manner in which supervised learning setups are [typically represented](../week-2/supervised-learning-setup), we can represent this situation in the following manner:
 
