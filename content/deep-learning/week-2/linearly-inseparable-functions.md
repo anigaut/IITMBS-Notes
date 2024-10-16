@@ -7,13 +7,21 @@ Till now, we have focused entirely on linearly separable functions since single 
 
 From the table, we derive the following set of inequalities:
 
-$$w_0 + w_1*0 + w_2*0<0 \implies w_0 <0$$
+$$
+w_0 + w_1*0 + w_2*0<0 \implies w_0 <0
+$$
 
-$$w_0+w_1*0+w_2*1 \geq 0 \implies w_2 \geq -w_0$$
+$$
+w_0+w_1*0+w_2*1 \geq 0 \implies w_2 \geq -w_0
+$$
 
-$$w_0+w_1*1+w_2*0 \geq 0 \implies w_1 \geq -w_0$$
+$$
+w_0+w_1*1+w_2*0 \geq 0 \implies w_1 \geq -w_0
+$$
 
-$$w_0+w_1*1+w_1*1<0 \implies w_1+w_2<-w_0$$
+$$
+w_0+w_1*1+w_1*1<0 \implies w_1+w_2<-w_0
+$$
 - The fourth inequality contradicts the second and third, meaning that isn't a linearly separable function.
 
 If we have 2 inputs, how many Boolean functions can we create with them? Since there are 4 possible inputs - $(0,0),(0,1),(1,0),(1,1)$ there are possible 16 combinations of outputs. This generalises to $2^{2^n}$ for $n$ inputs. Of these functions, the number of them that are linearly separable is hard to tell. 

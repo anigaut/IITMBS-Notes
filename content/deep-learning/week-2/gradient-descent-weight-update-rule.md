@@ -5,14 +5,22 @@ Using the [Taylor Series](taylor-series.md), we [established](gradient-descent.m
 
 After iteration $t$, the algorithm to update the weight at the $t+1^{th}$ iteration should be:
 
-$$w_{t+1} = w_{t} - \eta \nabla w_{t}$$
+$$
+w_{t+1} = w_{t} - \eta \nabla w_{t}
+$$
 
-$$b_{t+1}=b_{t}-\eta \nabla b_{t}$$
+$$
+b_{t+1}=b_{t}-\eta \nabla b_{t}
+$$
 Where:
 
-$$\nabla w_{t} = \frac{\partial \mathcal{L}(w,b)}{\partial w}$$
+$$
+\nabla w_{t} = \frac{\partial \mathcal{L}(w,b)}{\partial w}
+$$
 
-$$\nabla b_{t} = \frac{\partial \mathcal{L}(w,b)}{\partial b}$$
+$$
+\nabla b_{t} = \frac{\partial \mathcal{L}(w,b)}{\partial b}
+$$
 
 - Both derivatives are calculated at $w = w_{t}$ and $b = b_{t}$. 
 
@@ -22,29 +30,45 @@ The pseudocode for this algorithm is:
 
 What is the formula to compute the gradient for the sigmoid function, which has been the focus till now? Remember that $f(x) = \frac{1}{1+e^{-(wx+b)}}$. Assuming there's only one input point, the loss function is:
 
-$$\mathcal{L}(w,b) = \frac{1}{2}(f(x)-y)^{2}$$
+$$
+\mathcal{L}(w,b) = \frac{1}{2}(f(x)-y)^{2}
+$$
 
 The derivative can therefore be calculated as:
 
-$$\nabla_w = \frac{\partial}{\partial w} [\frac{1}{2}(f(x)-y)^{2}]$$
+$$
+\nabla_w = \frac{\partial}{\partial w} [\frac{1}{2}(f(x)-y)^{2}]
+$$
 
-$$ = \frac{1}{2}[2*(f(x)-y) * \frac{\partial}{\partial w}(f(x) - y)]$$
+$$
+= \frac{1}{2}[2*(f(x)-y) * \frac{\partial}{\partial w}(f(x) - y)]
+$$
 
-$$= (f(x) - y) * \frac{\partial}{\partial w}(\frac{1}{1+e^{-(wx+b)}})$$
+$$
+= (f(x) - y) * \frac{\partial}{\partial w}(\frac{1}{1+e^{-(wx+b)}})
+$$
 
 Recall from the good ol' days that $\frac{d}{dx} (\frac{1}{x}) = \frac{1}{x^{2}} * \frac{d}{dx} x$. Using the chain rule, upon computing the derivative of the sigmoid function, we get:
 
-$$\nabla_w = (f(x)-y)*f(x)*(1-f(x))*x$$
+$$
+\nabla_w = (f(x)-y)*f(x)*(1-f(x))*x
+$$
 
 Similarly:
 
-$$\nabla_b = (f(x)-y)*f(x)*(1-f(x))$$
+$$
+\nabla_b = (f(x)-y)*f(x)*(1-f(x))
+$$
 
 For two or more points:
 
-$$\sum_{i=1}^{n} \nabla_w = (f(x)-y)*f(x)*(1-f(x))*x$$
+$$
+\sum_{i=1}^{n} \nabla_w = (f(x)-y)*f(x)*(1-f(x))*x
+$$
 
-$$\sum_{i=1}^{n} \nabla_b = (f(x)-y)*f(x)*(1-f(x))$$
+$$
+\sum_{i=1}^{n} \nabla_b = (f(x)-y)*f(x)*(1-f(x))
+$$
 
 These 2 derivates can be plugged into the update formula to get the new weight vector. The following 3D plot shows the loss gradually decreasing as the weights and bias change:
 

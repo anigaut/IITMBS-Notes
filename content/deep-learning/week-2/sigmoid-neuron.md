@@ -9,7 +9,9 @@ Recall that a perceptron fires (i.e., returns 1) if the sum of its weighted inpu
 
 A function which would shift gradually from 0 to 1 would be better than one which takes only either extreme. The sigmoid function is one such example. It is expressed as:
 
-$$y = \frac{1}{1+e^{-(w_0+\sum_{i=1}^n w_ix_i)}}$$
+$$
+y = \frac{1}{1+e^{-(w_0+\sum_{i=1}^n w_ix_i)}}
+$$
 We don't see a sharp shift from one side to another when we cross the threshold. 
 
 ![[sigmoid_function.png]]

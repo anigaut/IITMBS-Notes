@@ -14,7 +14,9 @@ Let's apply to these to the example of whether we want to watch a movie. In such
 - **Data**: $x_i$: the input vector and $y_i$ = {yes/no}
 - **Model**: An approximation of the relationship between the input and output. Let's say we decide to use the logistic function:
 
-$$\hat{y} = \frac{1}{1+e^{-w^{T}x}}$$
+$$
+\hat{y} = \frac{1}{1+e^{-w^{T}x}}
+$$
 
 - **Parameters**: $w$.
 - **Learning algorithm**: Gradient Descent (will be covered soon)

@@ -11,11 +11,17 @@ In 1943, McCulloch, a Neuroscientist and Pitts, a logician, proposed a simple co
 In this model, a series of Boolean inputs $x_1, x_2, ... , x_n \in [0, 1]$  are aggregated (i.e., summed up) by a function $\large g$ and another function $\large f$ takes a Boolean decision based on this aggregation. The output of $f$ is $y \in [0,1]$. Inputs can be excitatory or inhibitory. Inhibitory inputs are those that act as deal breakers, of sorts. If they are true, the output will be false, regardless of how the other inputs behave. 
 Mathematically, this can be summarised as:
 
-$$g(x_1, x_2,...,x_n) = g(x) = \sum_{i=1}^{n} x_i$$
+$$
+g(x_1, x_2,...,x_n) = g(x) = \sum_{i=1}^{n} x_i
+$$
 
-$$y = f(g(x)) = 1 \;\; if \;\; g(x) \geq \theta$$
+$$
+y = f(g(x)) = 1 \;\; if \;\; g(x) \geq \theta
+$$
 
-$$y = 0 \;\; if \;\; g(x) < \theta$$
+$$
+y = 0 \;\; if \;\; g(x) < \theta
+$$
 
 The threshold in question is  $\theta$.
 

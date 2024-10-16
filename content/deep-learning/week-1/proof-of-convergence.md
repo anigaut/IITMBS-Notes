@@ -11,7 +11,9 @@ With that established, the following screenshot has the pseudocode for this slig
 
 Notice that we have only one `if` loop this time since all points in $P'$ are positive. $w^*$ is the optimal solution, but we don't know what it is yet. It gets updated each time $w^{T}p_i \leq 0$. It need not be updated after every iteration. Hence, after $t$ iterations, the total number of updates $k$ will be less than $t$.  Now, let's say at the $t^{th}$ iteration, we see a misclassification for point $p_i$. We correct that giving us $w_{t+1} = w_t + p_i$. If $\beta$ is the angle between $w^*$ and $w_{t+1}$: 
 
-$$cos\beta = \frac{w^*w_{t+1}}{||w_{t+1}||}$$
+$$
+cos\beta = \frac{w^*w_{t+1}}{||w_{t+1}||}
+$$
 Upon performing some computations on the numerator and denominator of the above, we get:
 
 ![[10.png]]
@@ -19,7 +21,9 @@ Upon performing some computations on the numerator and denominator of the above,
 
 Combining the 2 results, we get:
 
-$$cos\beta \geq \frac{w^*w_0 + k\delta}{\sqrt{||w_0||^{2}+k}}$$
+$$
+cos\beta \geq \frac{w^*w_0 + k\delta}{\sqrt{||w_0||^{2}+k}}
+$$
 
 This means that $cos\beta$ grows proportionally to $\sqrt{k}$. As $k$ increases, $cos\beta$ could become arbitrarily large. However, $cos\beta$ has to be $\leq 1$, which means that $k$ will be bounded too. This proves that the number of updates made to the weight vector will be a finite and the PLA will converge at some point. 
 

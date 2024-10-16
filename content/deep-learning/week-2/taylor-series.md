@@ -16,10 +16,14 @@ If we know the value of a function at a particular point, we can approximate the
 
 - Linear approximation:
 
-$$\ell(w) = \ell(w_0) + \frac{\ell'(w_0)}{1!}(w-w_0)$$
+$$
+\ell(w) = \ell(w_0) + \frac{\ell'(w_0)}{1!}(w-w_0)
+$$
 
 - Quadratic:
 
-$$\ell(w) = \ell(w_0) + \frac{\ell'(w_0)}{1!}(w-w_0) + \frac{\ell''(w_0)}{2!}(w-w_0)^{2}$$
+$$
+\ell(w) = \ell(w_0) + \frac{\ell'(w_0)}{1!}(w-w_0) + \frac{\ell''(w_0)}{2!}(w-w_0)^{2}
+$$
 
 $\ell'$ and $\ell''$ refer to the first and second order derivatives of the function.

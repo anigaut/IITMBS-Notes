@@ -1,5 +1,5 @@
 ---
-title: "Talking to the Output Layer: Computation of Gradient"
+title: Computing Gradient of Loss Function With Respect to Output Layer
 ---
 In the process of [investigating](backpropagation-intuition) who is responsible for a model's poor functioning, the first step is to inspect the output layer and compute the derivative of the loss function with respect to it. 
 
