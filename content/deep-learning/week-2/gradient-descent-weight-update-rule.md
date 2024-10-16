@@ -74,3 +74,44 @@ These 2 derivates can be plugged into the update formula to get the new weight v
 
 ![[gradient-descent-weight-update.png]]
 
+Python code for the Gradient Descent Model from start to finish:
+
+```python
+import numpy as np
+
+# Using sigmoid function
+def output(x, w, b):
+	return 1 / (1 + np.exp(-(w * x + b)))
+
+def gradient_weight(x, w, b, y):
+	fx = output(x, w, b)
+	return (fx - y) * fx * (1 - fx) * x
+
+def gradient_bias(w, x, b, y):
+	fx = output(x, w, b)
+	return (fx - y) * fx * (1 - fx)
+
+def grad_desc(X, Y, w, b, eta, max_epochs):
+	weights = []
+	biases = []
+	for i in range(max_epochs):
+		dw = 0
+		db = 0
+
+		for (x, y) in zip(X, Y):
+			dw = gradient_weight(w, x, b, y)
+			db = gradient_bias(w, x, b, y)
+			w -= eta * dw
+			
+		w -= eta * dw
+		b -= eta * db
+
+	return (w, b)
+
+def mean_squared_error(X, Y, w, b):
+	error = 0
+	for x, y in zip(X, Y):
+		fx = output(x, w, b)
+		error += (y - fx) ** 2
+	return (error / len(X))
+```
