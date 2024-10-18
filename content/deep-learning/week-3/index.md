@@ -9,7 +9,7 @@ title: Week 3
 5. [Gradient of Loss Function With Respect to Hidden Layers](talking-to-hidden-layers)
 6. [Gradient of Loss Function With Respect to Parameters](talking-to-parameters)
 7. [Backpropagation Pseudocode](backpropagation-pseudocode)
-8. [Derivative of Activation Functions][activation-function-derivative]
+8. [Derivative of Activation Functions](activation-function-derivative)
 
 
 
